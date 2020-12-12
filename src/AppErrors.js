@@ -94,7 +94,7 @@ class InvalidConfiguration extends ApplicationError {
 }
 
 /**
- * Error caused by invalid function argument. Not suitable for http request, which should use RequestError
+ * Error caused by invalid function argument. Not suitable for http request, which should use BadRequest
  * @class
  * @extends InvalidArgument  
  */

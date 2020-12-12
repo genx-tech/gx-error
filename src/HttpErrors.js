@@ -5,7 +5,7 @@
  * @module HttpErrors
  */
 
-const { GeneralError, InvalidArgument, InvalidConfiguration, ExposableError, ApplicationError } = require('./AppErrors');
+const { GeneralError, ExposableError, ApplicationError } = require('./AppErrors');
 const { ValidationError } = require('./DataErrors');
 
 const HttpCode = require('http-status-codes');

@@ -9,7 +9,7 @@ const HttpCode = require('http-status-codes');
  */
 
 /**
- * Valiation error.
+ * Validation error.
  * @class
  */
 class ValidationError extends ExposableError {
@@ -22,7 +22,7 @@ class ValidationError extends ExposableError {
  * Referenced entity not found.
  * @class
  */
-class ReferencedNotExistError extends ExposableError {
+class ReferencedNotExist extends ExposableError {
     constructor(message, info) {
         super(message, info, HttpCode.BAD_REQUEST, 'E_REFERENCED_NOT_EXIST');
     }
@@ -39,6 +39,16 @@ class DuplicateError extends ExposableError {
 }
 
 /**
+ * Unexpected data/state error.
+ * @class
+ */
+class UnexpectedState extends ApplicationError {
+    constructor(message, info) {
+        super(message, info, 'E_UNEXPECTED');
+    }
+}
+
+/**
  * Database operation error.
  * @class
  */
@@ -49,6 +59,8 @@ class DatabaseError extends ApplicationError {
 }
 
 exports.ValidationError = ValidationError;
-exports.ReferencedNotExistError = ReferencedNotExistError;
+exports.ReferencedNotExistError = ReferencedNotExist; //backward compatible
+exports.ReferencedNotExist = ReferencedNotExist;
 exports.DuplicateError = DuplicateError;
+exports.UnexpectedState = UnexpectedState;
 exports.DatabaseError = DatabaseError;
