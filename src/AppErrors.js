@@ -1,6 +1,6 @@
 "use strict";
 
-const HttpCode = require('http-status-codes');
+const { StatusCodes: HttpCode } = require('http-status-codes');
 
 /**
  * App errors.

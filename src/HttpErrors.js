@@ -8,7 +8,7 @@
 const { GeneralError, ExposableError, ApplicationError } = require('./AppErrors');
 const { ValidationError } = require('./DataErrors');
 
-const HttpCode = require('http-status-codes');
+const { StatusCodes: HttpCode } = require('http-status-codes');
 
 /**
  * Request errors.

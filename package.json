@@ -1,6 +1,6 @@
 {
   "name": "@genx/error",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Commonly used errors",
   "main": "lib/index.js",
   "publishConfig": {
@@ -9,8 +9,7 @@
   "scripts": {
     "doc": "jsdoc -c jsdoc.json -t ./node_modules/ink-docstrap/template -R README.md -d './docs' -r --verbose ./src",
     "bulid:clean": "rm -rf lib",
-    "build": "npm run bulid:clean && NODE_ENV=development babel src -d lib --copy-files && del lib/**/__test__",
-    "build:prod": "npm run bulid:clean && NODE_ENV=production babel src -d lib --copy-files && del lib/**/__test__"
+    "build": "npm run bulid:clean && NODE_ENV=production babel src -d lib --copy-files && del lib/**/__test__"
   },
   "author": "Rockie Guo <rockie@kitmi.com.au>",
   "license": "MIT",

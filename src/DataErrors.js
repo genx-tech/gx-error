@@ -1,7 +1,7 @@
 "use strict";
 
 const { ExposableError, ApplicationError } = require('./AppErrors');
-const HttpCode = require('http-status-codes');
+const { StatusCodes: HttpCode } = require('http-status-codes');
 
 /**
  * Data errors.
