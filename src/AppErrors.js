@@ -89,7 +89,7 @@ class InvalidConfiguration extends ApplicationError {
      * @param {string} [item] - The related config item   
      */ 
     constructor(message, app, item) {        
-        super(message, { app: app.name, configNode: item }, 'E_INVALID_CONF');
+        super(message, { app: app.name, item }, 'E_INVALID_CONF');
     }
 }
 

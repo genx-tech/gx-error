@@ -13,8 +13,10 @@ const { StatusCodes: HttpCode } = require('http-status-codes');
  * @class
  */
 class ValidationError extends ExposableError {
-    constructor(message, info) {
+    constructor(message, info, inner) {
         super(message, info, HttpCode.BAD_REQUEST, 'E_INVALID_DATA');
+
+        this.inner = inner;
     }
 }
 
